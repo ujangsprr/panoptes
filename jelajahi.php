@@ -423,7 +423,9 @@ function wpac_ajax_init() {
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
-
+        <div class="section-title">
+          <h2>Testimoni</h2>
+        </div>
         <div class="row">
           <div class="col center" data-aos="zoom-in" data-aos-delay="100">
             <div class="video-box2 d-flex justify-content-center align-items-stretch">
