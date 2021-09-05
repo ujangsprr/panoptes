@@ -423,13 +423,21 @@ function wpac_ajax_init() {
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
+
+        <div class="row">
+          <div class="col center" data-aos="zoom-in" data-aos-delay="100">
+            <div class="video-box2 d-flex justify-content-center align-items-stretch">
+              <a href="https://youtu.be/p_M6bKLE9CA" target="blank" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            </div>
+          </div>
+        </div>
       <div class="container">
         <div class="owl-carousel testimonials-carousel">
           <div class="testimonial-wrap">
             <div class="testimonial-item">
               <img src="assets/img/doctors/doctors-1.jpg" class="testimonial-img" alt="">
               <h3>dr. Trianggadewi</h3>
-              <h4>Ophthalmologist at Jombang Islamic Hospital</h4>
+              <h4>Dokter Spesialis Mata Rumah Sakit Islam Jombang</h4>
               <p class="justify">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   "Panoptes membantu kita dalam program berantas kebutaan khususnya akibat katarak. 
@@ -464,12 +472,12 @@ function wpac_ajax_init() {
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/doctors/doctors-2.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/doctors/daus.jpg" class="testimonial-img" alt="">
               <h3>Muhammad Firdaus Maulana</h3>
-              <h4>RnD Staff at Youth Care for Cataract (YCC)</h4>
+              <h4>Staff RnD Komunitas Youth Care for Cataract (YCC)</h4>
               <p class="justify">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                A good cataract detection application to apply for public, especially for people who still don't understand the symptoms of cataracts.
+               Aplikasi pendeteksi katarak yang baik untuk diterapkan pada masyarakat khususnya bagi masyarakat yang masih belum memahami gejala-gejala katarak.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -477,12 +485,12 @@ function wpac_ajax_init() {
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/doctors/doctors-3.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/doctors/adit.jpg" class="testimonial-img" alt="">
               <h3>Aditia Yuliyanto</h3>
-              <h4>Deputy Leader Youth Care for Cataract (YCC)</h4>
+              <h4>Wakil Ketua Komunitas Youth Care for Cataract (YCC)</h4>
               <p class="justify">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                I do believe that Panoptes is not only providing a service that can be helpful for mainstream society, but also can embrace its service to help remote communities. Together, with the help of you all, Panoptes is working to realizing this dreams.
+                Saya percaya bahwa Panoptes tidak hanya menyediakan layanan yang dapat membantu masyarakat arus utama, tetapi juga dapat merangkul layanannya untuk membantu masyarakat terpencil. Bersama-sama, dengan bantuan Anda semua, Panoptes bekerja untuk mewujudkan impian ini.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -490,12 +498,12 @@ function wpac_ajax_init() {
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/doctors/doctors-4.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/doctors/lusi.jpg" class="testimonial-img" alt="">
               <h3>Lusiana Dian Ningrum</h3>
-              <h4>RnD Lead at Youth Care for Cataract (YCC)</h4>
+              <h4>Ketua RnD Komunitas Youth Care for Cataract (YCC)</h4>
               <p class="justify">
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                This platform is very helpful for the community and the state to improve the quality of life for a better, more prosperous, and all elements of society can have equal rights to health services.
+               Platform ini sangat membantu masyarakat dan negara untuk meningkatkan kualitas hidup yang lebih baik, lebih sejahtera, dan semua elemen masyarakat dapat memiliki hak yang sama atas pelayanan kesehatan.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
