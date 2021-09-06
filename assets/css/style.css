@@ -1610,6 +1610,7 @@ section {
 }
 
 .doctors .member .member-info {
+  width: 75%;
   padding-left: 30px;
 }
 
@@ -1852,6 +1853,9 @@ section {
   .testimonials .testimonial-item .testimonial-img {
     position: static;
     left: auto;
+  }
+  .testimonials .video-box2 {
+  min-height: 180px;
   }
 }
 
