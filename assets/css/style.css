@@ -2622,10 +2622,10 @@ List product
     background:#1977cc
   }
   .single-product .product-btm{
-    height: 25vh;
-    padding:20px 24px 20px;
+    height: 190px;
+    padding:10px 20px 20px;
     border:1px solid #f0f2f1;
-    text-align:left
+    
   }
   .single-product .product-btm h4{color:#4a4a4a;
     font-size:14px;
@@ -2647,6 +2647,9 @@ List product
   }
 
   @media (max-width: 992px) {
+  .single-product .product-btm {
+    height: 220px;
+  }
   .single-product .product-btm span {
     font-size:12px;
   }
@@ -2660,7 +2663,7 @@ List product
   .single-product:hover .product-btm h4{
     color:#1977cc;
   }
-    .main_btn{
+  .single-product .product-btm .main_btn{
     display:inline-block;
     background:#1977cc;
 
@@ -2675,15 +2678,14 @@ List product
     cursor:pointer;
     transition:all 300ms linear 0s; border-radius:50px
   }
-  .main_btn:hover{
+  .single-product .product-btm .main_btn:hover{
     background:transparent;
     color:#1977cc;
   }
-  .main_btn2{
+  .single-product .product-btm .main_btn2{
     display:inline-block;
     background:#fff;
-    margin-top: 10px;
-    width: 100%;
+    width: 100vh;
     letter-spacing:0.25px;
     color:#1977cc;font-family:"Montserrat",sans-serif;
     font-size:12px;font-weight:500;
@@ -2694,7 +2696,7 @@ List product
     cursor:pointer;
     transition:all 300ms linear 0s; border-radius:50px
   }
-  .main_btn2:hover{
+  .single-product .product-btm .main_btn2:hover{
     background:#1977cc;
     color:#fff;
   }
@@ -2703,7 +2705,8 @@ List product
       line-height:38px;
       padding:0px 38px;
       margin-right:10px
-    }
+  }
+
 
 
 
