@@ -2685,7 +2685,7 @@ List product
   .single-product .product-btm .main_btn2{
     display:inline-block;
     background:#fff;
-    width: 100vh;
+    width: 100%;
     letter-spacing:0.25px;
     color:#1977cc;font-family:"Montserrat",sans-serif;
     font-size:12px;font-weight:500;
