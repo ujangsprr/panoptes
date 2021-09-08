@@ -1,3 +1,10 @@
+/**
+* Template Name: Medilab - v2.1.0
+* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+* Author: BootstrapMade.com
+* License: https://bdootstrapmade.com/license/
+*/
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -306,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 2px solid #fff;
 }
 
-.nav-menu a:hover, .nav-menu, .nav-menu li:hover > a {
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #1977cc;
   border-color: #1977cc;
 }
@@ -1192,7 +1199,7 @@ section {
 }
 
 .about .video-box2 {
-  background: url("../img/webinar.PNG") center center no-repeat;
+  background: url("../img/about1.jpg") center center no-repeat;
   background-size: cover;
   min-height: 300px;
 }
@@ -1610,7 +1617,6 @@ section {
 }
 
 .doctors .member .member-info {
-  width: 75%;
   padding-left: 30px;
 }
 
@@ -1782,11 +1788,6 @@ section {
   position: absolute;
   left: -45px;
 }
-.testimonials .video-box2 {
-  background: url("../img/testimoni.png") center center no-repeat;
-  background-size: cover;
-  min-height: 300px;
-}
 
 .testimonials .testimonial-item h3 {
   font-size: 18px;
@@ -1853,104 +1854,6 @@ section {
   .testimonials .testimonial-item .testimonial-img {
     position: static;
     left: auto;
-  }
-  .testimonials .video-box2 {
-  min-height: 180px;
-  }
-}
-
-.testimonials .play-btn {
-  width: 94px;
-  height: 94px;
-  background: radial-gradient(#1977cc 50%, rgba(25, 119, 204, 0.4) 52%);
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
-  overflow: hidden;
-}
-
-.testimonials .play-btn::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 100;
-  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.testimonials .play-btn::before {
-  content: '';
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation: pulsate-btn 2s;
-  animation: pulsate-btn 2s;
-  -webkit-animation-direction: forwards;
-  animation-direction: forwards;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: steps;
-  animation-timing-function: steps;
-  opacity: 1;
-  border-radius: 50%;
-  border: 5px solid rgba(25, 119, 204, 0.7);
-  top: -15%;
-  left: -15%;
-  background: rgba(198, 16, 0, 0);
-}
-
-.testimonials .play-btn:hover::after {
-  border-left: 15px solid #1977cc;
-  transform: scale(20);
-}
-
-.testimonials .play-btn:hover::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border: none;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
-  z-index: 200;
-  -webkit-animation: none;
-  animation: none;
-  border-radius: 0;
-}
-
-@-webkit-keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
-
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
   }
 }
 
@@ -2622,10 +2525,10 @@ List product
     background:#1977cc
   }
   .single-product .product-btm{
-    height: 190px;
-    padding:10px 20px 20px;
+    height: 25vh;
+    padding:20px 24px 20px;
     border:1px solid #f0f2f1;
-    
+    text-align:left
   }
   .single-product .product-btm h4{color:#4a4a4a;
     font-size:14px;
@@ -2647,9 +2550,6 @@ List product
   }
 
   @media (max-width: 992px) {
-  .single-product .product-btm {
-    height: 220px;
-  }
   .single-product .product-btm span {
     font-size:12px;
   }
@@ -2663,7 +2563,7 @@ List product
   .single-product:hover .product-btm h4{
     color:#1977cc;
   }
-  .single-product .product-btm .main_btn{
+    .main_btn{
     display:inline-block;
     background:#1977cc;
 
@@ -2678,29 +2578,26 @@ List product
     cursor:pointer;
     transition:all 300ms linear 0s; border-radius:50px
   }
-  .single-product .product-btm .main_btn:hover{
+  .main_btn:hover{
     background:transparent;
     color:#1977cc;
   }
-  .single-product .product-btm .main_btn2{
+  .main_btn2{
     display:inline-block;
     background:#fff;
-    width:100%;
+    margin-top: 10px;
+    width: 100%;
     letter-spacing:0.25px;
-    color:#1977cc;
-    font-family:"Montserrat",sans-serif;
-    font-size:12px;
-    font-weight:500;
+    color:#1977cc;font-family:"Montserrat",sans-serif;
+    font-size:12px;font-weight:500;
     line-height:30px;
     outline:none !important;
     box-shadow:none !important;
-    text-align:center;
-    border:2px solid #1977cc;
+    text-align:center; border:2px solid #1977cc;
     cursor:pointer;
-    transition:all 300ms linear 0s;
-    border-radius:50px
+    transition:all 300ms linear 0s; border-radius:50px
   }
-  .single-product .product-btm .main_btn2:hover{
+  .main_btn2:hover{
     background:#1977cc;
     color:#fff;
   }
@@ -2709,8 +2606,7 @@ List product
       line-height:38px;
       padding:0px 38px;
       margin-right:10px
-  }
-
+    }
 
 
 
@@ -2915,6 +2811,7 @@ Banner Iklan
 # Our Clients
 --------------------------------------------------------------*/
 .clients .swiper-pagination {
+
   position: relative;
 }
 
@@ -2939,9 +2836,4 @@ Banner Iklan
 .clients .swiper-slide img:hover {
   filter: none;
   opacity: 1;
-}
-
-.mitra {
-  max-width: 200px;
-  height: auto;
 }
