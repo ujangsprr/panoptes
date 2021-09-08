@@ -2685,16 +2685,20 @@ List product
   .single-product .product-btm .main_btn2{
     display:inline-block;
     background:#fff;
-    width: 100%;
+    width:100%;
     letter-spacing:0.25px;
-    color:#1977cc;font-family:"Montserrat",sans-serif;
-    font-size:12px;font-weight:500;
+    color:#1977cc;
+    font-family:"Montserrat",sans-serif;
+    font-size:12px;
+    font-weight:500;
     line-height:30px;
     outline:none !important;
     box-shadow:none !important;
-    text-align:center; border:2px solid #1977cc;
+    text-align:center;
+    border:2px solid #1977cc;
     cursor:pointer;
-    transition:all 300ms linear 0s; border-radius:50px
+    transition:all 300ms linear 0s;
+    border-radius:50px
   }
   .single-product .product-btm .main_btn2:hover{
     background:#1977cc;
