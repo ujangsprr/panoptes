@@ -1,8 +1,3 @@
-<?php
-if (!isset($_SESSION['logged_in'])) {
-  echo "<meta http-equiv='refresh' content='0;url=login' />";
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,10 +46,9 @@ if (!isset($_SESSION['logged_in'])) {
   <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/quiz2.css" rel="stylesheet">
+
   <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
   <script type="text/javascript">
   window.addeventasync = function(){
@@ -81,21 +75,27 @@ if (!isset($_SESSION['logged_in'])) {
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="index">Perawatan Mata</a></li>
-          <li><a href="jelajahi">Jelajahi</a></li>
-          <li class="active"><a href="edukasi">Edukasi</a></li>
+          <li><a href="index">New Product</a></li>
+          <li><a href="kesehatan">Eye Care</a></li>
+          <li><a href="jelajahi">Explore</a></li>
+          <li class="active"><a href="edukasi">Education</a></li>
 
       <?php
       // session_start();
         // $idsess = $_SESSION['id'];
-        $namess = $_SESSION['firstname'];
-        // echo "<li><a href='include/logout' class='bi bi-people-fill'> $namess</a></li>";
-        echo "<a href='#' class=' container d-flex align-items-center ml-2 bi bi-people-fill' data-toggle='dropdown'>$namess</a>
-              <li class='dropdown-menu'>
-                  <a href='include/logout' class='dropdown-item bi bi-door-closed-fill'> Logout</a>
-              </li>
-              </ul>
-              </nav>";
+        if (!isset($_SESSION['logged_in'])) {
+          echo "<meta http-equiv='refresh' content='0;url=login'/>";
+        }
+        else{
+          $namess = $_SESSION['firstname'];
+          // echo "<li><a href='include/logout' class='bi bi-people-fill'> $namess</a></li>";
+          echo "<a href='#' class=' container d-flex align-items-center ml-2 bi bi-people-fill' data-toggle='dropdown'>$namess</a>
+                <li class='dropdown-menu'>
+                    <a href='include/logout' class='dropdown-item bi bi-door-closed-fill'> Logout</a>
+                </li>
+                </ul>
+                </nav>";
+        }
       ?>
     </div>
   </header><!-- End Header -->
@@ -136,7 +136,7 @@ if (!isset($_SESSION['logged_in'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Artikel</h2>
+          <h2>Articles</h2>
         </div>
 
         <div class="row">
@@ -146,21 +146,16 @@ if (!isset($_SESSION['logged_in'])) {
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Terapi obat Atropin pada usia dini dapat menghilangkan resiko mata minus</h3></br>
+            <h3>Atropine drug therapy at an early age can eliminate the risk of minus eye</h3></br>
             <p class="text-justify">
-              Hingga saat ini, satu-satunya jalan untuk menyembuhkan mata minus adalah dengan operasi LASIK. 
-              Tapi ternyata ada sebuah obat yang bisa mencegah minus mata anda bertambah parah. 
-              Obat mata minus ini adalah atropin. Atropin adalah obat yang digunakan untuk menangani kejang otot.
+              Until now, the only way to cure minus eye is with LASIK surgery. But it turns out there is a drug that can prevent your minus eye from getting worse. This minus eye drug is atropine. Atropine is a drug used to treat muscle spasms.
             </p>
             <p class="text-justify">
-              Atropin tersedia dalam bentuk obat tetes mata. 
-              Obat ini bekerja melumpuhkan otot akomodasi mata (otot yang mengatur ketebalan lensa mata) dan membesarkan pupil. 
-              Beberapa penelitian melaporkan bahwa anak-anak yang punya mata minus dan diresepkan atropin tetes mengalami 
-              penurunan keparahan minus mata, daripada anak-anak yang tidak diberi atropin.
+              Atropine is available in the form of eye drops. This drug works by paralyzing the accommodation muscle of the eye (the muscle that regulates the thickness of the lens of the eye) and dilates the pupil. Several studies reported that children who had myopia and were prescribed atropine drops experienced a reduction in the severity of myopia, than children who were not given atropine.
             </p>
             </br><hr>
             <p>
-              Jika ingin mendapatkan informasi artikel menarik lainnya silahkan gabung grup telegram panoptes
+              If you want to get information on other interesting articles, please join the Panoptes telegram group.
             </p>
             <hr>
           </div>
@@ -175,11 +170,11 @@ if (!isset($_SESSION['logged_in'])) {
 
         <div class="row">
           <div class="col-lg-9 text-left text-lg-start">
-            <h3>Group Telegram</h3>
-            <p> Anda dapat bergabung dengan grup telegram Panoptes untuk mendapat informasi tentang kesehatan mata yang terpercaya.</p>
+            <h3>Telegram groups</h3>
+            <p>You can join the Panoptes telegram group to get reliable information about eye health.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="https://t.me/joinchat/SEqe7dmXFFM3YTJl" target="blank">Bergabung</a>
+            <a class="cta-btn align-middle" href="https://t.me/joinchat/SEqe7dmXFFM3YTJl" target="blank">Join</a>
           </div>
         </div>
 
@@ -192,22 +187,18 @@ if (!isset($_SESSION['logged_in'])) {
   <section id="specials" class="specials">
     <div class="container mt-4" data-aos="fade-up">
       <div class="section-title">
-        <h2>Konsultasi Online</h2>
+        <h2>Online Consultation</h2>
       </div>
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-9 mt-4 mt-lg-0 order-2 order-lg-1">
           </br>
-          <h3>Konsultasi Bersama Dokter Spesialis Mata</h3>
+          <h3>Consultation with an Ophthalmologist</h3>
             </br>
             <p class="text-justify">
-              Panoptes Insight hadir ditengah-tengah kita untuk dapat memfasilitasi konsultasi mata online. 
-              Kita akan pertemukan kalian dengan Dokter Spesialis Mata untuk melakukan konsultasi secara jarak jauh. 
-              Jangan khawatir lupa dengan hasil konsultasinya, karena kita akan menyediakan dokumen hasil konsultasi tersebut.
+              Panoptes Insight is here in our midst to facilitate online eye consultations. We will meet you with an Ophthalmologist for a remote consultation. Don't worry about forgetting the results of the consultation, because we will provide a document of the results of the consultation.  
             </p>
             <p class="text-justify">
-              Konsultasi mata secara jarak jauh bukan hal yang mustahil lagi untuk dilakukan. Dengan adanya konsultasi online ini, 
-              kita menjadi lebih fleksibel dalam menentukan jadwal kontrol rutin dan bahkan kita bisa mencegah dari dini untuk 
-              resiko kerusakan mata yang lebih parah tanpa kita sadari.
+              Remote eye consultation is not impossible anymore. With this online consultation, we become more flexible in determining the routine control schedule and we can even prevent early risk of more severe eye damage without us knowing it.
             </p>
         </div>
         <div class="col-lg-3 text-center order-1 order-lg-2">
@@ -217,7 +208,7 @@ if (!isset($_SESSION['logged_in'])) {
         </div>        
       </div>
       <div class="cta-btn-container text-center">
-          <a class="cta-btn align-middle" target="blank" href="https://api.whatsapp.com/send/?phone=62895366740711&text=Pesan%0ANama%3A+%0ATTL%3A+%0ARS%2FKlinik%3A+%0AHari%3A+%0AKeluhan%3A">Konsultasi Sekarang</a>
+          <a class="cta-btn align-middle" target="blank" href="https://api.whatsapp.com/send/?phone=62895366740711&text=Pesan%0ANama%3A+%0ATTL%3A+%0ARS%2FKlinik%3A+%0AHari%3A+%0AKeluhan%3A">Consultation Now</a>
       </div>
     </div>
   </section><!-- End Specials Section -->
@@ -238,21 +229,16 @@ if (!isset($_SESSION['logged_in'])) {
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Talkshow Ask Me Anything</h3>
-            <h5>"Tanya Jawab Seputar Kesehatan Mata"</h5>
+            <h5>"Questions About Eye Health"</h5>
             </br>
             <p class="text-justify">
-              Adalah acara tanya jawab serta membahas 
-              tuntas tentang kesehatan mata dengan Dokter Spesialis.  Talkshow ini diselenggarakan oleh Panoptes Insight  
-              dengan Moderator Maulida Mardhatillah, Dokter Muda RS Saiful Anwar Malang dan Narasumber dr Trianggadewi, 
-              Dokter Spesialis Mata. 
+              Is a question and answer event and discuss thoroughly about eye health with Specialist Doctors. This talkshow was organized by Panoptes Insight with Moderator Maulida Mardhatillah, Junior Doctor of Saiful Anwar Hospital Malang and resource person Dr. Trianggadewi, Ophthalmologist.
             </p>
             <p class="text-justify">
-              Dengan adanya acara ini, peserta mendapat wawasan baru dari pengalaman peserta lain ataupun informasi 
-              menarik dari jawaban Dokter Mata. Panoptes Insight berharap agar semua yang hadir bisa menjadi penggerak 
-              bagi orang-orang untuk peduli dengan kesehatan matanya.
+              With this event, participants get new insights from the experiences of other participants or interesting information from the answers of the Ophthalmologist. Panoptes Insight hopes that all those present can be a motivator for people to care about their eye health.
             </p>
             <div class="cta-btn-container text-center">
-                <a class="cta-btn align-middle" href="https://drive.google.com/file/d/1KnhJGgAiPQjQqWRdfGhhGV4yt5UXp9RV/view?usp=sharing" target="blank">Download Materi</a>
+                <a class="cta-btn align-middle" href="https://drive.google.com/file/d/1KnhJGgAiPQjQqWRdfGhhGV4yt5UXp9RV/view?usp=sharing" target="blank">Download Material</a>
             </div>
           </div>
         </div>
@@ -272,28 +258,16 @@ if (!isset($_SESSION['logged_in'])) {
               Politeknik Elektronika Negeri Surabaya (PENS)<br>
               Surabaya<br>
               Indonesia<br><br>
-              <strong>Telepon:</strong>+62 8953-6674-0711<br>
+              <strong>Telephone:</strong>+62 8953-6674-0711<br>
               <strong>Email:</strong> panoptes.id@gmail.com<br>
             </p>
           </div>
 
-          <!-- <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Link</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#article">Article</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#faq">Help</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
-            </ul>
-          </div> -->
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>layanan Kami</h4>
+            <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="">Poli Mata</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="">Cek Mata Katarak</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Eye Clinic</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Cataract Eye Test</a></li>
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="">Tes Buta Warna</a></li> -->
             </ul>
           </div>
@@ -308,11 +282,6 @@ if (!isset($_SESSION['logged_in'])) {
           &copy; Copyright <strong><span>Panoptes</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
-          <!-- Designed by RnD YCC (Youth Care for Cataract) Team</a> -->
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -337,9 +306,11 @@ if (!isset($_SESSION['logged_in'])) {
   <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/submission.js"></script>
   <script src="assets/js/quiz2.js"></script>

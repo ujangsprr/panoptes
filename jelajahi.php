@@ -104,13 +104,14 @@ function wpac_ajax_init() {
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="index">Perawatan Mata</a></li>
-          <li class="active"><a href="jelajahi">Jelajahi</a></li>
-          <li><a href="edukasi">Edukasi</a></li>
+          <li><a href="index">New Product</a></li>
+          <li><a href="kesehatan">Eye Care</a></li>
+          <li class="active"><a href="jelajahi">Explore</a></li>
+          <li><a href="edukasi">Education</a></li>
       <?php
       // session_start();
       if (!isset($_SESSION['logged_in'])) {
-        echo "</ul></nav><a href='login' class='appointment-btn scrollto'>Masuk</a>";
+        echo "</ul></nav><a href='login' class='appointment-btn scrollto'>Login</a>";
       }
       else {
         // $idsess = $_SESSION['id'];
@@ -133,7 +134,7 @@ function wpac_ajax_init() {
   <section id="jelajahi" class="d-flex align-items-start">
     <div class="container mt-5">
       <h1>Panoptes</h1>
-      <h2>Panoptes memberikan pengalaman informasi dan layanan kesehatan mata yang lebih baik. </h2>
+      <h2>Giving eye health information and services experience better</h2>
       <!--<a href="/loginp" class="btn-get-started scrollto">Get Started</a> -->
     </div>
   </section><!-- End Jelajahi -->
@@ -148,7 +149,7 @@ function wpac_ajax_init() {
           <div class="col-lg-6">
             <div class="content">
               <div class="new">
-                <h3 class="font-weight-bold">Tes Mata Katarak</h3>
+                <h3 class="font-weight-bold">Cataract Eye Test</h3>
               </div>            
               <div class="container coba">         
                 <div class="center">
@@ -156,7 +157,7 @@ function wpac_ajax_init() {
                         <div id="quiz">
                             <div class="question">
                                 <h4 class="text-left">
-                                  <span id="question">Apakah penglihatan terasa kabur saat melihat sesuatu?</span>
+                                  <span id="question">Is your vision blurry when you see something?</span>
                                 </h4>
                             </div>
                             <ul>
@@ -164,14 +165,14 @@ function wpac_ajax_init() {
                               <div class="col">
                                 <li class="text-center">    
                                   <input type="radio" id="s-option" name="selector" value="2">
-                                  <button for="s-option" class="btn btn-primary set-font">Tidak</button>
+                                  <button for="s-option" class="btn btn-primary set-font">No</button>
                                   <!-- <div class="check"></div> -->
                                 </li>
                               </div>
                               <div class="col">                            
                               <li class="text-center">
                                 <input type="radio" id="f-option" name="selector" value="1">
-                                <button for="f-option" class="btn btn-outline-primary set-font">Ya</button>
+                                <button for="f-option" class="btn btn-outline-primary set-font">Yes</button>
                                 <!-- <div class="check"></div> -->                                
                               </li>
                             </div>
@@ -193,10 +194,10 @@ function wpac_ajax_init() {
                     <br/>
                     <span id="totalCorrect3" class="pull-right"></span>
                     
-                    <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Panoptes+:+Waktunya+Tes+Rutin&details=Lakukan+tes+rutin+untuk+pencegahan+katarak.+Kunjungi+Panoptes.id+sekarang!&pli=1&sf=true">Jadwalkan Tes Berikutnya!</a>
+                    <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Panoptes+:+Waktunya+Tes+Rutin&details=Lakukan+tes+rutin+untuk+pencegahan+katarak.+Kunjungi+Panoptes.id+sekarang!&pli=1&sf=true">Schedule Your Next Test!</a>
                     <br/>
                     <form action="jelajahi" class="align-items-center">
-                      <input class="appointment-btn" outline="none" border="none" type="submit" value="Kembali"></input>
+                      <input class="appointment-btn" outline="none" border="none" type="submit" value="Back"></input>
                     </form>
                     
                     <!-- <form action="/quizResult" method="POST"> -->
@@ -221,15 +222,15 @@ function wpac_ajax_init() {
                 <a href="#doctors"><div class="col-lg-6 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i><img src="assets/img/icon/hospital.png"></i>
-                    <h4>Poli Mata Online</h4>
-                   <a href="#doctors">Periksa mata tanpa harus ke rumah sakit.</a>
+                    <h4>E-Clinics</h4>
+                   <a href="#doctors">Find your clinic and have conversation by online.</a>
                   </div>
                 </div></a>
                 <a href="#faq"><div class="col-lg-6 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0 ">
                     <i><img src="assets/img/icon/bantuan.png"></i>
-                    <h4>Bantuan</h4>
-                   <a href="#faq">Informasi Pemesanan dan FAQ.</a>
+                    <h4>Help</h4>
+                   <a href="#faq">Ordering Information and FAQ.</a>
                   </div>
                 </div></a>
               </div>
@@ -246,8 +247,8 @@ function wpac_ajax_init() {
       <div class="container">
 
         <div class="section-title">
-          <h2>Daftar Poli Mata</h2>
-          <p>Periksa mata bersama dengan dokter spesialis mata lebih mudah.</p>
+          <h2>List of Clinics</h2>
+          <p>Check your eyes with an ophthalmologist more easily.</p>
         </div>
 
         <div class="row">
@@ -305,7 +306,7 @@ function wpac_ajax_init() {
                 </div>
                 <div class="col-md-8 form-group mt-3 mt-md-0">
                     <div class="text-center mt-3">
-                      <a target="blank" id="kunjungi" class="btn btn-primary btn-lg btn-block">Kunjungi</a>
+                      <a target="blank" id="kunjungi" class="btn btn-primary btn-lg btn-block">Visit</a>
                       <a class="btn btn-secondary btn-lg btn-block" data-dismiss="modal">Close</a>
                     </div>
                 </div>
@@ -327,36 +328,36 @@ function wpac_ajax_init() {
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3>Penghargaan Panoptes</h3>
+            <h3>Awards</h3>
             <!-- <p class="justify">Panoptes memberikan pengalaman layanan pesan, periksa, dan tebus obat mata yang lebih baik.</p> -->
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-award"></i></div>
-              <h4 class="title">Medali Emas</h4>
+              <h4 class="title">Gold Medal</h4>
               <p class="description">Bangkok International Intellectual Property, Invention, Innovation, and Technology Exposition (IPITEx) 2021.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-award"></i></div>
-              <h4 class="title">Medali Emas</h4>
+              <h4 class="title">Gold Medal</h4>
               <p class="description">Youth International Science Fair 2021.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-award"></i></div>
-              <h4 class="title">Medali Emas</h4>
+              <h4 class="title">Gold Medal</h4>
               <p class="description"> Global Young Scientist Challenge di India, 2020.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bi bi-patch-check"></i></div>
-              <h4 class="title">Penghargaan Spesial</h4>
+              <h4 class="title">Special Award</h4>
               <p class="description">Malaysia Innovation, Invention and Creativity Association (MIICA).</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bi bi-trophy"></i></div>
-              <h4 class="title">Juara 3</h4>
+              <h4 class="title">3rd Place</h4>
               <p class="description">Paragon Innovation Circle 2021.</p>
             </div>
 
@@ -371,46 +372,46 @@ function wpac_ajax_init() {
       <div class="container">
 
         <div class="section-title">
-          <h2>Pertanyaan yang Sering Diajukan</h2>
-          <p>Bagian ini mencakup apa yang sering ditanyakan orang</p>
+          <h2>Frequently Asked Questions</h2>
+          <p>This section covers what people often ask</p>
         </div>
 
         <div class="faq-list">
           <ul>
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-1">Bagaimana Akurasi Tes Mata Katarak Panoptes ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-1">How Accurate is the Panoptes Cataract Test?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
                 <p>
-                  Kami mengembangkan program AI bersama dokter spesialis mata. Program kami mengadopsi dan mengotomasi metode anamnesis yang biasa dilakukan di medis.
+                  We developed an AI program with ophthalmologists. Our program adopts and automates the usual medical history taking methods.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-2" class="collapsed">Apa itu Panoptes Insight? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-2" class="collapsed">What is Panoptes Insight?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-parent=".faq-list">
                 <p>
-                  Kami adalah sebuah perusahaan dengan misi penyediaan layanan digital pencegahan dan mitigasi kesehatan mata. Layanan Panoptes Insight mulai dikembangkan tahun 2018.
+                  We are a company with a mission to provide digital eye health prevention and mitigation services. The Panoptes Insight service was developed in 2018.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3" class="collapsed">Bagaimana proses pemesanan poli mata online?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3" class="collapsed">How is the online eye poly order process?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-parent=".faq-list">
                 <p>
-                  Anda dapat melakukan pemesanan dengan klik tombol Poli Mata di atas. Anda akan diarahkan untuk memilih rumah sakit atau klinik dan mengisi data diri. Konfirmasi data dan pembayaran akan dilakukan melalui WhatsApp.
+                  You can place an order by clicking the Eye Poly button above. You will be directed to choose a hospital or clinic and fill in your personal data. Confirmation of data and payment will be made via WhatsApp.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4" class="collapsed">Bagaimana skema pemeriksaan di poli mata online?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4" class="collapsed">How is the examination scheme at the online eye poly?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-parent=".faq-list">
                 <p>
                   <!-- <img src="assets/img/skema.png"> -->
                   <br>
-                  Setelah melakukan pemesanan, Anda akan dihubungi untuk melakukan anamnesis melalui online meeting. Anamnesis dilakukan bersama dokter langsung selama lebih kurang 45 menit. Jika diperlukan pemeriksaan lebih lanjut Anda akan diarahkan untuk ke rumah sakit atau klinik yang Anda pilih. Obat akan diantar langsung ke alamat rumah.
+                  After placing an order, you will be contacted to take a history through an online meeting. The history taking is done directly with the doctor for approximately 45 minutes. If further examination is required you will be directed to the hospital or clinic of your choice. Medicines will be delivered directly to your home address.
                 </p>
               </div>
             </li>
@@ -423,13 +424,11 @@ function wpac_ajax_init() {
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
-        <div class="section-title">
-          <h2>Testimoni</h2>
-        </div>
+
         <div class="row">
           <div class="col center" data-aos="zoom-in" data-aos-delay="100">
             <div class="video-box2 d-flex justify-content-center align-items-stretch">
-              <a href="https://youtu.be/p_M6bKLE9CA" target="blank" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+              <a href="https://www.youtube.com/watch?v=1dYCSC8enis" target="blank" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
             </div>
           </div>
         </div>
@@ -522,7 +521,7 @@ function wpac_ajax_init() {
       <div class="container">
 
         <div class="section-title">
-          <h2>Mitra</h2>
+          <h2>Partners</h2>
         </div>
 
         <div class="clients-slider swiper-container mt-4">
@@ -558,22 +557,22 @@ function wpac_ajax_init() {
               Politeknik Elektronika Negeri Surabaya (PENS)<br>
               Surabaya<br>
               Indonesia<br><br>
-              <strong>Telepon:</strong>+62 8953-6674-0711<br>
+              <strong>Telephone:</strong>+62 8953-6674-0711<br>
               <strong>Email:</strong> panoptes.id@gmail.com<br>
             </p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Layanan Kami</h4>
+            <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Poli Mata</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Cek Mata Katarak</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Eye Clinic</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Cataract Eye Test</a></li>
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="">Tes Buta Warna</a></li> -->
             </ul>
           </div>
           
           <div class="col-lg col-md-6 footer-links">
-            <h4>Berikan Penilaian</h4>
+            <h4>Ratings</h4>
             <div id="wpac-rating" class="container text-left"></div>
           
             <script type="text/javascript">

@@ -5,7 +5,7 @@ require_once __DIR__.'/vendor/autoload.php';
  
 $client = new Google_Client();
 $client->setAuthConfigFile('./client_secret.json');
-$client->setRedirectUri("http://localhost/panoptes/auth");
+$client->setRedirectUri("https://panoptes.id/auth");
 $client->setScopes(array(
     "https://www.googleapis.com/auth/userinfo.email",
     "https://www.googleapis.com/auth/userinfo.profile",

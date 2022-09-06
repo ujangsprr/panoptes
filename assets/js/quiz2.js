@@ -12,12 +12,12 @@ $(function(){
     var questionNo = 0;
     var correctCount = 1;
     var q = [
-      {'Q':'Apakah penglihatan terasa kabur saat melihat sesuatu?', 'A':1,'C':['Iya','Tidak']},
-      {'Q':'Apakah kedua mata terasa kabur?', 'A':1,'C':['Iya','Tidak']},
-      {'Q':'Apakah penglihatan kabur muncul secara mendadak?', 'A':1,'C':['Iya','Tidak']},
-      {'Q':'Apakah muncul kemerah-merahan pada mata?', 'A':1,'C':['Iya','Tidak']},
-      {'Q':'Apakah saat melihat sesuatu terasa seperti tertutup kabut?', 'A':1,'C':['Iya','Tidak']},
-      {'Q':'Apakah saat melihat sesuatu seringkali terasa silau?', 'A':1,'C':['Iya','Tidak']},
+      {'Q':'Is your vision blurry when you see something?', 'A':1,'C':['Iya','Tidak']},
+      {'Q':'Do your both eyes feel blurry?', 'A':1,'C':['Iya','Tidak']},
+      {'Q':'Does blurred vision appear suddenly?', 'A':1,'C':['Iya','Tidak']},
+      {'Q':'Does the eye appear red?', 'A':1,'C':['Iya','Tidak']},
+      {'Q':'Does seeing something feel like it is covered in fog?', 'A':1,'C':['Iya','Tidak']},
+      {'Q':'Do you often feel dazzled when you see something?', 'A':1,'C':['Iya','Tidak']},
      ];
 
     $(document.body).on('click',"button.btn",function (e) {
@@ -60,17 +60,17 @@ $(function(){
             questionNo++;
             let prediksi;
             let nasehat;
-            let label = "Nasehat Medis:";
+            let label = "Medical Advice:";
             if(correctCount==1){
-                prediksi = "Katarak";
-                nasehat = "Mohon maaf mata Anda kemungkinan terdapat katarak, silahkan periksakan mata Anda lebih lanjut.";
+                prediksi = "Cataract";
+                nasehat = "Sorry, your eyes may have cataracts, please check your eyes further at a clinic or ophthalmologist.";
             }
             else{
-                prediksi = "Bukan Katarak";
-                nasehat = "Selamat mata Anda bebas dari katarak, tetap jaga kesehatan mata. Lakukan pemeriksaan rutin untuk mencegah risiko.";
+                prediksi = "Not Cataract";
+                nasehat = "Congratulations your eyes are free from cataracts, keep your eyes healthy. Carry out regular checks to prevent risks.";
             }
             if((questionNo + 1) > q.length){
-                alert("Anamnesis selesai, klik ok untuk melihat hasilnya!");
+                alert("The anamnesis is complete, click ok to see the results!");
                 $('button.btn').unbind('click');
                 setTimeout(function(){
                     var toAppend = '';
@@ -83,7 +83,7 @@ $(function(){
                         toAppend += '</tr>'
                     });
                     $('#quizResult').html(toAppend);
-                    $('#totalCorrect').html("Prediksi: " + prediksi);
+                    $('#totalCorrect').html("Prediction: " + prediksi);
                     $('#totalCorrect2').html(label);
                     $('#totalCorrect3').html(nasehat);
                     $('#quizResult').show();

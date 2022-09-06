@@ -45,11 +45,11 @@
   <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/quiz2.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/css/quiz2.css" rel="stylesheet">
   <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
   <script type="text/javascript">
   window.addeventasync = function(){
@@ -81,9 +81,9 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index">Perawatan Mata</a></li>
-          <li><a href="jelajahi">Jelajahi</a></li>
-          <li><a href="edukasi">Edukasi</a></li>
+          <li class="active"><a href="index">Eye Care</a></li>
+          <li><a href="jelajahi">Explore</a></li>
+          <li><a href="edukasi">Education</a></li>
 
       <?php
       // session_start();
@@ -149,7 +149,7 @@
           <div class="container d-flex justify-content-center mb-4">
             <div class="advanced-search d-flex align-items-center">
               <select class="category-btn" onchange="location = this.value;">
-                    <option >Kota</option>                      
+                    <option >City</option>                      
                     <option value="index?id=1">Surabaya</option>
                     <option value="index?id=2">Bali</option>
                     <option value="index?id=3">Bangkalan</option>
@@ -159,7 +159,7 @@
               </select>
               <form method="GET" action="search" class="input-group d-flex align-items-center">
                 <div class="col-10">
-                  <input id="search" type="search" class="px-2" name='key' placeholder=" Cari Produk" style="height: 40px;" required>
+                  <input id="search" type="search" class="px-2" name='key' placeholder=" Search Product" style="height: 40px;" required>
                 </div>
                 <div class="col-2">
                   <button type="submit"><i class="bi bi-search"></i></button>  
@@ -197,7 +197,7 @@
                                     <span class="mr-4">Rp. <?= $harga; ?></span>
                                 </div>
                                 <div>
-                                    <a href="https://api.whatsapp.com/send?phone=<?=$nomor;?>" target="blank" class="main_btn2">Beli</a>
+                                    <a href="https://api.whatsapp.com/send?phone=<?=$nomor;?>" target="blank" class="main_btn2">Buy</a>
                                 </div>
                                 </div>
                             </div>
@@ -207,7 +207,7 @@
                     $result->free();
                 }
                 else{
-                    echo "Produk tidak ditemukan";
+                    echo "Product not found";
                 }
           ?>
           </div>
@@ -229,28 +229,16 @@
               Politeknik Elektronika Negeri Surabaya (PENS)<br>
               Surabaya<br>
               Indonesia<br><br>
-              <strong>Telepon:</strong>+62 8953-6674-0711<br>
+              <strong>Telephone:</strong>+62 8953-6674-0711<br>
               <strong>Email:</strong> panoptes.id@gmail.com<br>
             </p>
           </div>
 
-          <!-- <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Link</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#article">Article</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#faq">Help</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
-            </ul>
-          </div>
- -->
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Layanan Kami</h4>
+            <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="polimata">Poli Mata</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="submission">Cek Mata Katarak</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Eye Clinic</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Cataract Eye Test</a></li>
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="">Tes Buta Warna</a></li> -->
             </ul>
           </div>
@@ -259,16 +247,12 @@
     </div>
 
     <div class="container d-md-flex py-4">
+
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
           &copy; Copyright <strong><span>Panoptes</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
-          <!-- Designed by RnD YCC (Youth Care for Cataract) Team</a> -->
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -293,12 +277,12 @@
   <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/submission.js"></script>
-  <script src="assets/js/quiz2.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/js/submission.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/js/quiz2.js"></script>
 
 </body>
 

@@ -1,405 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
 
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168357827-1">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-168357827-1');
-</script>
-
-  <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Panoptes - Home</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link  rel="icon" media="all" href="assets/img/logo.png">
-  <link rel="panoptes-icon" media="all" href="assets/img/panoptesapple-touch-icon.png">
-
-  <!-- Google Fonts -->
- <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">-->
-  <link href="{{font_url}}" rel="stylesheet"/>
-
-  <!-- Vendor CSS Files -->
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/venobox/venobox.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
-
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/quiz2.css" rel="stylesheet">
-  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
-  <script type="text/javascript">
-  window.addeventasync = function(){
-      addeventatc.settings({
-          appleical  : {show:true, text:"Apple Calendar"},
-          google     : {show:true, text:"Google <em>(online)</em>"},
-          office365  : {show:true, text:"Office 365 <em>(online)</em>"},
-          outlook    : {show:true, text:"Outlook"},
-          outlookcom : {show:true, text:"Outlook.com <em>(online)</em>"},
-          yahoo      : {show:true, text:"Yahoo <em>(online)</em>"}
-      });
-  };
-</script>
-  <!-- =======================================================
-  * Template Name: Medilab - v2.1.0
-  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-  * Author: BootstrapM-->
-  <?php
-    // session_start();
-  ?>
-  
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo mr-auto"><a href="index"><img src="assets/img/logoblack.png"></a></h1> 
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="index">Perawatan Mata</a></li>
-          <li><a href="jelajahi">Jelajahi</a></li>
-          <li><a href="edukasi">Edukasi</a></li>
-      
-      <?php
-      // session_start();
-      if (!isset($_SESSION['logged_in'])) {
-        echo "</ul></nav><a href='login' class='appointment-btn scrollto'>Masuk</a>";
-      }
-      else {
-        // $idsess = $_SESSION['id'];
-        $namess = $_SESSION['firstname'];
-        // echo "<li><a href='include/logout' class='bi bi-people-fill'> $namess</a></li>";
-        echo "
-                  <a href='#' class=' container d-flex align-items-center ml-2 bi bi-people-fill' data-toggle='dropdown'>$namess</a>
-                  <li class='dropdown-menu'>
-                      <a href='include/logout' class='dropdown-item bi bi-door-closed-fill'> Logout</a>
-                  </li>
-                  </ul>
-                  </nav>";
-      }
-
-      if(!isset($_GET['id'])){
-        echo "<meta http-equiv='refresh' content='0;url=?id=1' />";
-      }else{
-        $id_kota = $_GET['id'];
-      }      
-
-      ?>
-      
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <div id="carouselpromo" class="carousel slide" data-ride="carousel" style="margin-top: 70px;">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselpromo" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselpromo" data-slide-to="1"></li>
-      <li data-target="#carouselpromo" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="assets/img/slide/1.png" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/slide/2.png" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/img/slide/3.png" alt="Third slide">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselpromo" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselpromo" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  <!-- End Hero -->
-
-  <main id="main">
-
-    <!--================ New Product Area =================-->
-    <section class="new_product_area section_gap_top section_gap_bottom_custom">
-      <div class="container ">
-        <div class="container d-flex justify-content-center mb-4">
-          <div class="advanced-search d-flex align-items-center">
-                <select class="category-btn" onchange="location = this.value;">
-                      <option disabled>Kota</option>                      
-                      <option value="?id=1" <?php if($id_kota == 1) echo"selected"; ?>>Surabaya</option>
-                      <option value="?id=2" <?php if($id_kota == 2) echo"selected"; ?>>Bali</option>
-                      <option value="?id=3" <?php if($id_kota == 3) echo"selected"; ?>>Bangkalan</option>
-                      <option value="?id=4" <?php if($id_kota == 4) echo"selected"; ?>>Jombang</option>
-                      <option value="?id=5" <?php if($id_kota == 5) echo"selected"; ?>>Sampang</option>
-                      <option value="?id=6" <?php if($id_kota == 6) echo"selected"; ?>>Sidoarjo</option>
-                </select>
-                <form method="GET" action="search" class="input-group d-flex align-items-center">
-                  <div class="col-10">
-                    <input id="search" type="search" class="px-2" name='key' placeholder=" Cari Produk" style="height: 40px;" required>
-                  </div>
-                  <div class="col-2">
-                    <button type="submit"><i class="bi bi-search"></i></button>  
-                  </div>
-                </form>
-          </div>
-        </div>
-        <?php 
-            include 'include/connect.php';
-            $query1 = "SELECT * FROM `product` WHERE `product`.`id_kota` = $id_kota ORDER BY `product`.`id` DESC LIMIT 1";
-            if ($result = $connection->query($query1)) {
-              while ($row = $result->fetch_assoc()) {
-                  $product = $row["product"];
-                  $harga = $row["harga"];
-                  $gambar = $row["gambar"];
-                  $nomor = $row["nomor"];
-                  ?>
-                  <div class="row">
-                    <div class="col-sm-6 mt-2 mt-0">
-                      <div class="new_product">
-                        <h5 class="text-uppercase">Promo Spesial</h5>
-                        <h3><?= $product; ?></h3>
-                        <div class="product-img">
-                          <img class="img-fluid" src="assets/img/product/<?= $gambar; ?>" alt="" />
+        <title>Panoptes - New Product</title>        
+        <link  rel="icon" media="all" href="assets/img/logo.png">
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="assets/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+            <div class="container px-5">
+                <!-- <a class="navbar-brand fw-bold" href="#page-top">Start Bootstrap</a> -->
+                <h1 class="navbar-brand"><a href="index"><img src="assets/img/logoblack.png" height="50px"></a></h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item"><a class="nav-link activate me-lg-3" href="#">New Product</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="kesehatan">Service</a></li>
+                    </ul>
+                    <!-- <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                        <span class="d-flex align-items-center">
+                            <i class="bi-chat-text-fill me-2"></i>
+                            <span class="small">Order Now</span>
+                        </span>
+                    </button> -->
+                </div>
+            </div>
+        </nav>
+        <!-- Mashead header-->
+        <header class="masthead">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Mashead text and app badges-->
+                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                            <h1 class="display-1 lh-1 mb-3">We're on a mission to use technology prudently to optimize health services in hospitals.</h1>
+                            <p class="lead fw-normal text-muted mb-5">Improve the performance of nurses and doctors to minimize delays in treating patients by monitoring the patient's heart in real-time, wirelessly, and an integrated web server</p>
                         </div>
-                        <h4>Rp. <?= $harga; ?></h4>
-                        <a href="https://api.whatsapp.com/send?phone=<?=$nomor;?>" target="blank" class="main_btn">Buat Janji</a>
-                      </div>
                     </div>
-              <?php
-              }
-                $result->free();
-            } 
-          ?>
-        
-        <div class="col-sm-6 mt-2 mt-0">
-          <div class="row">
-          <?php
-            $query2 = "SELECT * FROM `product` WHERE `product`.`id_kota` = $id_kota ORDER BY `product`.`id` ASC LIMIT 4";
-
-            if ($result = $connection->query($query2)) {
-                while ($row = $result->fetch_assoc()) {
-                    $product = $row["product"];
-                    $harga = $row["harga"];
-                    $gambar = $row["gambar"];
-                    $nomor = $row["nomor"];
-                    ?>
-                      <div class="col-6 col-6">
-                        <div class="single-product">
-                          <div class="product-img">
-                            <img class="img-fluid w-100" src="assets/img/product/<?= $gambar; ?>" alt="" />
-                          </div>
-                          <div class="product-btm">
-                            <a class="d-block">
-                              <h4><?= $product; ?></h4>
-                            </a>
-                            <div class="mt-3">
-                              <span class="mr-4">Rp. <?= $harga; ?></span>
-                            </div>
-                            <div>
-                              <a href="https://api.whatsapp.com/send?phone=<?=$nomor;?>" target="blank" class="main_btn2">Beli</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-              <?php
-                    }
-                    $result->free();
-                } 
-            ?> 
-
-          </div>
-          </div>
-
-          <div class="col-sm-6 mt-2 mt-0">
-            <div class="row">
-          <?php
-            $query3 = "SELECT * FROM `product` WHERE `product`.`id_kota` = $id_kota ORDER BY `product`.`id` DESC LIMIT 4";
-
-            if ($result = $connection->query($query3)) {
-                while ($row = $result->fetch_assoc()) {
-                    $product = $row["product"];
-                    $harga = $row["harga"];
-                    $gambar = $row["gambar"];
-                    $nomor = $row["nomor"];
-                    ?>          
-                      <div class="col-6 col-6">
-                        <div class="single-product">
-                          <div class="product-img">
-                            <img class="img-fluid w-100" src="assets/img/product/<?= $gambar; ?>" alt="" />
-                          </div>
-                          <div class="product-btm">
-                            <a class="d-block">
-                              <h4><?= $product; ?></h4>
-                            </a>
-                            <div class="mt-3">
-                              <span class="mr-4">Rp. <?= $harga; ?></span>
-                            </div>
-                            <div>
-                              <a href="https://api.whatsapp.com/send?phone=<?=$nomor;?>" target="blank" class="main_btn2">Beli</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  <?php
-                    }
-                      $result->free();
-                  } 
-                ?> 
+                    <div class="col-lg-6">
+                        <img src="assets/img/image1.png" alt="" style="max-width: 40vw;">
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="col-sm-6 mt-2 mt-0">
-            <div class="row">
-          <?php
-            $query4 = "SELECT * FROM `product` WHERE `product`.`id_kota` = $id_kota ORDER BY `product`.`id` ASC LIMIT 4";
-
-            if ($result = $connection->query($query4)) {
-                while ($row = $result->fetch_assoc()) {
-                    $product = $row["product"];
-                    $harga = $row["harga"];
-                    $gambar = $row["gambar"];
-                    $nomor = $row["nomor"];
-                    ?>          
-                      <div class="col-6 col-6">
-                        <div class="single-product">
-                          <div class="product-img">
-                            <img class="img-fluid w-100" src="assets/img/product/<?= $gambar; ?>" alt="" />
-                          </div>
-                          <div class="product-btm">
-                            <a href="#" class="d-block">
-                              <h4><?= $product; ?></h4>
-                            </a>
-                            <div class="mt-3">
-                              <span class="mr-4">Rp. <?= $harga; ?></span>
-                            </div>
-                            <div>
-                              <a href="https://api.whatsapp.com/send?phone=<?=$nomor;?>" target="_blank" class="main_btn2">Beli</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  <?php
-                      }
-                        $result->free();
-                    } 
-                ?> 
+        </header>
+        <!-- Quote/testimonial aside-->
+        <aside class="text-center bg-gradient-primary-to-secondary" style="height: 100px;">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="h2 fs-4 text-white mb-4">"Delivering the value of technology to hospitals, nurses, doctors and patients"</div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </aside>
+        <!-- App features section-->
+        <section id="features">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                        <div class="container-fluid px-5">
+                            <div class="row gx-5">
+                                <div class="col-md-6 mb-5">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <i class="bi-wifi icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Wireless</h3>
+                                        <p class="text-muted mb-0">Provide better devices communication solution by using Internet of Things technology.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-5">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <i class="bi-graph-up icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Central</h3>
+                                        <p class="text-muted mb-0">Efficient patient monitoring using an integrated information system in web server.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-5 mb-md-0">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <i class="bi-battery-charging icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Energy</h3>
+                                        <p class="text-muted mb-0">Recharge-able and replace-able battery to ensure 24/7 monitoring system.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <i class="bi-clock icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Real-time</h3>
+                                        <p class="text-muted mb-0">Deliver real-time data from patients to ensure an urgent response without any delay.!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-0">
+                        <img src="assets/img/image2.png" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Basic features section-->
+        <section class="bg-light">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-12 col-lg-5">
+                        <h2 class="display-4 lh-1 mb-4">We envision a world where everyone, everywhere has adequate health facilities to improve their health</h2>
+                    </div>
+                    <div class="col-sm-8 col-md-6">
+                        <div class="px-5 px-sm-0"><img class="img-fluid" src="assets/img/new/kegiatan.JPG" alt="..." /></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-black text-center py-5">
+            <div class="container px-5">
+                <div class="text-white-50 small">
+                    <div class="mb-2">&copy; Panoptes 2022. All Rights Reserved.</div>
+                    <a href="#!">Privacy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="#!">Terms</a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="#!">FAQ</a>
+                </div>
+            </div>
+        </footer>
+        <!-- Feedback Modal-->
+        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Send feedback</h5>
+                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body border-0 p-4">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <!--================ End New Product Area =================-->
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Panoptes</h3>
-            <p>
-              Politeknik Elektronika Negeri Surabaya (PENS)<br>
-              Surabaya<br>
-              Indonesia<br><br>
-              <strong>Telepon:</strong>+62 8953-6674-0711<br>
-              <strong>Email:</strong> panoptes.id@gmail.com<br>
-            </p>
-          </div>
-
-          <!-- <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Link</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#article">Article</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#faq">Help</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
-            </ul>
-          </div>
- -->
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Layanan Kami</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="">Poli Mata</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="">Cek Mata Katarak</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="">Tes Buta Warna</a></li> -->
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-      <div class="mr-md-auto text-center text-md-left">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Panoptes</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
-          <!-- Designed by RnD YCC (Youth Care for Cataract) Team</a> -->
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-<!--         <a href="https://web.facebook.com/panoptes.insight/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-        <a href="https://www.instagram.com/panoptes.id/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/jquery/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/php-email-form/validate.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/venobox/venobox.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/counterup/counterup.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/purecounter/purecounter.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/submission.js"></script>
-  <script src="assets/js/quiz2.js"></script>
-
-</body>
-
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="assets/js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>

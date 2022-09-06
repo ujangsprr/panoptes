@@ -45,11 +45,12 @@
   <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link type="text/css" href="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/quiz2.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/css/quiz2.css" rel="stylesheet">
+
   <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
   <script type="text/javascript">
   window.addeventasync = function(){
@@ -234,12 +235,12 @@
   <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/HakimIhsan/p@master/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/submission.js"></script>
-  <script src="assets/js/quiz2.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/js/submission.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ujangsprr/panoptes@master/assets/js/quiz2.js"></script>
 
 </body>
 
